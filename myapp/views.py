@@ -4,5 +4,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def hello(request):
-    task = "My name is Israel, and this a Python Application I just created using Django Web Framework "
-    return HttpResponse(task + "\nHello World! This is Israel the DevOps Master")
+    task = "My name is Israel, and this a Python Application I just created using Django Web Framework\n "
+    return HttpResponse(task + "Hello World! This is Israel the DevOps Master")
