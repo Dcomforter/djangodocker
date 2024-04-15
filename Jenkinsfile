@@ -13,12 +13,17 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'python manage.py runserver'
+                sh 'python manage.py test'
             }
         }
-        stage('Deploy') {
+        // stage('Deploy') {
+        //     steps {
+        //         sh 'docker-compose up -d --build'
+        //     }
+        // }
+        stage('Run Server') {
             steps {
-                sh 'docker-compose up -d --build'
+                sh 'python manage.py runserver 0.0.0.0:8000'
             }
         }
     }
