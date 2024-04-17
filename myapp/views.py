@@ -4,6 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 def hello(request):
-    task = "Hello World!!! This is Israel the DevOps Master, presenting you with a Dockerized Python Application I just created using Django Web Framework. I have also created a CICD pipeline using Jenkins "
+    task = "Hello World!!! This is Israel the DevOps Master, presenting you with a Dockerized Python Application created using Django Web Framework. I have also created a CICD pipeline using Jenkins "
     
     return HttpResponse(task)
