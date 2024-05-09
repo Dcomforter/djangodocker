@@ -10,7 +10,7 @@
       action: ping
 
 ## package.yml
----
+#---
 - hosts: nodes
   remote_user: ansible
   become: yes
@@ -21,7 +21,7 @@
         state: present
 
 ## vars.yml
----
+#---
 - hosts: nodes
   remote_user: ansible
   become: yes
@@ -33,7 +33,7 @@
 
 
 ## nginx-role.yml
----
+#---
 - hosts: nodes
   become: yes
   tasks:
