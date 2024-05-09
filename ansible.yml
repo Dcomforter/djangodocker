@@ -1,0 +1,42 @@
+## Ansible Sample Playbook
+
+## ping.yml
+---
+- hosts: all
+  remote_user: ansible
+  become: yes
+  tasks:
+    - name: Ping all nodes in my infra
+      action: ping
+
+## package.yml
+---
+- hosts: nodes
+  remote_user: ansible
+  become: yes
+  tasks:
+    - name: Install a Specific Package
+      package: 
+        name: elinks
+        state: present
+
+## vars.yml
+---
+- hosts: nodes
+  remote_user: ansible
+  become: yes
+  tasks:
+    - name: Install any package with variable declaration
+      package: 
+        name: '{{ pkg }}'
+        state: present
+
+
+## nginx-role.yml
+---
+- hosts: nodes
+  become: yes
+  tasks:
+    - name: Install and Configure Nginx
+      include_role:
+        name: geerlingguy:nginx
